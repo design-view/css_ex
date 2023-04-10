@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li { float: left;}
+        li::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: tomato;
+        }
+        .clearboth::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearboth">
+        <li>리스트1</li>
+        <li>리스트2</li>
+    </ul>
+    <div>
+        박스입니다.
+    </div>
+</body>
+</html>
