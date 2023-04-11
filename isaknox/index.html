@@ -6,11 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * { padding:0; margin: 0; box-sizing: border-box;}
+        a { text-decoration: none; color: inherit;}
+        li { list-style: none; }
+        address { font-style: normal;}
+        h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+        img { vertical-align: top; }
+        body {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .blackbg {
+            background-color: #000;
+            color: #fff;
+        }
+        .innerCon {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #header ul:nth-child(1) {
+            float: left;
+        }
+        #header {
+            text-align: center;
+            padding: 20px 0;
+            line-height: 33px;
+        }
+        #header h1 {
+            display: inline-block;
+        }
+        #header ul:nth-child(3) {
+            float: right;
+        }
+        #header ul li {
+            float: left;
+            padding: 0 20px;
+        }
+        #header * {
+            vertical-align: middle;
+        }
+        .clearboth::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #visual img {
+            width: 100%;
+        }
+        #product div:nth-child(1) {
+            border-bottom: 3px double #ddd;
+            padding: 26px 0;
+        }
+        #product div:nth-child(1) h2 {
+            float: left;
+        }
+        #product div:nth-child(1) ul {
+            float: right;
+        }
+        #product div:nth-child(1) ul li {
+            float: left;
+            padding: 0 20px;
+            line-height: 45px;
+        }
+        #newProduct {
+            padding-bottom: 40px;
+        }
+        #newProduct h3 {
+            text-align: center;
+            padding: 20px 0;
+        }
+        #newProduct li {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            text-align: center;
+        }
+        #banner div {
+            float: left;
+            overflow: hidden;
+        }
+        #banner div:hover img {
+            transform: scale(1.1);
+        }
+        #banner div:nth-child(1) {
+            width: 50%;
+            height: 600px;
+        }
+        #banner div:nth-child(2) {
+            width: 50%;
+            height: 300px;
+        }
+        #banner div:nth-child(3) {
+            width: 25%;
+            height: 300px;
+        }
+        div {
+            background-repeat: no;
+        }
+        #banner div:nth-child(4) {
+            width: 25%;
+            height: 300px;
+        }
+        #banner div img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        #footermenu {
+            background-color: #f1eff0;
+            margin-top: 30px;
+            text-align: center;
+            padding: 26px;
+            line-height: 31px;
+        }
+        #footermenu > a {
+            float: left;
+        }
+        #footermenu ul {
+            display: inline-block;
+        }
+        #footermenu ul li{
+            float: left;
+            padding: 0 20px;
+        }
+        #footermenu > select {
+            float: right;
+            height: 31px;
+            width: 120px;
+        }
+        #footercopy {
+            padding: 20px 0;
+        }
+        #footercopy address {
+            float: left;
+        }
+        #footercopy h1{
+            float: right
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="innerCon">
+        <div id="header" class="blackbg">
+            <div class="innerCon clearboth">
                 <ul>
                     <li><i class="material-icons">store_mall_directory</i></li>
                     <li><i class="material-icons">message</i></li>
@@ -26,13 +166,13 @@
             </div>
         </div>
         <div id="main">
-            <div id="visual">
+            <div id="visual" class="blackbg">
                 <div class="innerCon">
                     <img src="./images/visual.gif" alt="">
                 </div>
             </div>
-            <div id="product">
-                <div>
+            <div id="product" class="innerCon">
+                <div class="clearboth">
                     <h2>
                         <img src="./images/so_title.gif" alt="">
                     </h2>
@@ -43,9 +183,9 @@
                         <li>CustomerCenter</li>
                     </ul>
                 </div>
-                <div>
+                <div id="newProduct">
                     <h3>New Product</h3>
-                    <ul>
+                    <ul class="clearboth">
                         <li>
                             <img src="./images/product01.gif" alt="">
                             <h4>X2D2</h4>
@@ -69,17 +209,17 @@
                     </ul>
                 </div>
             </div>
-            <div id="banner">
+            <div id="banner" class="innerCon clearboth">
                 <div><img src="./images/main_banner01.gif" alt=""></div>
                 <div><img src="./images/main_banner02.gif" alt=""></div>
                 <div><img src="./images/main_banner03.gif" alt=""></div>
                 <div><img src="./images/main_banner04.gif" alt=""></div>
             </div>
         </div>
-        <div id="footer">
-            <div id="footermenu">
+        <div id="footer" class="innerCon">
+            <div id="footermenu" class="clearboth">
                 <a href="#"><img src="./images/f_icon.gif" alt="페이스북바로가기"></a>
-                <ul>
+                <ul class="clearboth">
                     <li>Contact us </li>
                     <li>이용약관</li>
                     <li>개인정보취급방침</li>
@@ -89,10 +229,11 @@
                     <option value="">한국화장품</option>
                 </select>
             </div>
-            <div id="footercopy">
+            <div id="footercopy" class="clearboth">
                 <address>
                     (주)LG생활건강 / 서울틀별시 종로구 세문안로 58 LG광화문빌딩 110-783 대표이사 차석용 / 고객상담실 080-023-7007 / 사업자등록번호 107-81-98143 <br/>
-                    COPYRIGHT & LG HOUSEHOLD HEALTH CARE LTD. 2015 ALL RIGHT RESERVED.</address>
+                    COPYRIGHT & LG HOUSEHOLD HEALTH CARE LTD. 2015 ALL RIGHT RESERVED.
+                </address>
                 <h1>
                     <img src="./images/bottom_logo.gif" alt="">
                 </h1>
