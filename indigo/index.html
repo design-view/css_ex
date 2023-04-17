@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -20,6 +20,11 @@
                     <li><a href="#">CONTACT US</a></li>
                 </ul>
             </nav>
+            <div class="mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
         <main>
             <section>
@@ -158,28 +163,19 @@
                 <div class="tit">
                     <h2>CONTACT</h2>
                 </div>
-                <table>
-                    <tr>
-                        <td><input type="text" placeholder="name" name="user_name"></td>
-                        <td rowspan="3" id="pl">
-                            <textarea name="user_message" id="" cols="30" rows="10">
-                                Message
-                            </textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Phone" name="user_phone"></td>
-                       
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Email Address" name="user_email"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" value="SEND MESSAGE">
-                        </td>
-                    </tr>
-                </table>
+                <div id="message">
+                    <div id="inputs"> 
+                        <input type="text" placeholder="name" name="user_name">    
+                        <input type="text" placeholder="Phone" name="user_phone">
+                        <input type="text" placeholder="Email Address" name="user_email">
+                    </div>
+                    <div id="textMessage">
+                        <textarea name="user_message" id="" cols="30" rows="10">
+                        Message
+                        </textarea>
+                    </div>
+                    <div id="button"><input type="submit" value="SEND MESSAGE"></div>
+                </div>
             </section>
         </main>
         <footer>
